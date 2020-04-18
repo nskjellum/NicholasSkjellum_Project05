@@ -8,18 +8,18 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="354dp"
-        android:layout_height="432dp"
+        android:layout_width="388dp"
+        android:layout_height="325dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="47dp"
         android:layout_marginEnd="15dp"
         android:layout_marginRight="15dp"
         android:layout_marginBottom="31dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
         <TableLayout
             android:id="@+id/history"
@@ -28,6 +28,7 @@
             android:gravity="center">
 
             <TableRow
+                android:id="@+id/header"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal">
@@ -59,15 +60,15 @@
         android:layout_height="82dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="18dp"
         android:layout_marginEnd="19dp"
         android:layout_marginRight="19dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="14dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
@@ -116,6 +117,66 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="418dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="55dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <EditText
+            android:id="@+id/dateLower"
+            android:layout_width="117dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="LowerDate"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/dateUpper"
+            android:layout_width="117dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="UpperDate"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/amountLower"
+            android:layout_width="112dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="LowerBound"
+            android:inputType="numberSigned" />
+
+        <EditText
+            android:id="@+id/amountUpper"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="UpperBoun"
+            android:inputType="numberSigned" />
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="74dp"
+            android:layout_height="29dp"
+            android:layout_weight="1"
+            android:text="Search" />
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="320dp"
         android:layout_height="71dp"
@@ -124,7 +185,7 @@
         android:layout_marginTop="71dp"
         android:layout_marginEnd="46dp"
         android:layout_marginRight="46dp"
-        android:layout_marginBottom="21dp"
+        android:layout_marginBottom="13dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
@@ -150,4 +211,5 @@
             android:hapticFeedbackEnabled="true"
             android:text="$ 0.00" />
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
